@@ -95,10 +95,10 @@ li {
 
 /* Avatar */
 #avatar {
-  background-image: url("../assets/me.jpeg");
+  background-image: url("../assets/me2.jpeg");
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background-size: 275%;
-  background-position: 48% 52%;
+  background-size: 150%;
+  background-position: 40% 45%;
 }
