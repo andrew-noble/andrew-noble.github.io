@@ -9,7 +9,7 @@ body {
 main,
 header,
 footer {
-  max-width: 40%;
+  max-width: 800px;
   width: 100%;
   text-align: left;
 }
@@ -20,6 +20,6 @@ nav {
 
 hr {
   width: 100%;
-  max-width: 40%;
+  max-width: 800px;
   border: 0.5px solid #ddd;
 }
