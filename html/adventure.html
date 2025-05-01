@@ -27,19 +27,24 @@
     <footer id="footer"></footer>
 
     <script>
-        //header and footer fetcher
-        const includes = [
-            { id: "header", file: "/html/header.html" },
-            { id: "footer", file: "/html/footer.html" },
-        ];
+        //header and footer loader
+        async function loadIncludes() {
+            const includes = [
+                { id: "header", file: "/html/header.html" },
+                { id: "footer", file: "/html/footer.html" },
+            ];
 
-        includes.forEach(({ id, file }) => {
-            fetch(file)
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById(id).outerHTML = html;
-                });
-        });
+            for (const { id, file } of includes) {
+                const res = await fetch(file);
+                const html = await res.text();
+                document.getElementById(id).outerHTML = html;
+
+                if (id === "footer") {
+                    document.getElementById("currentYear").textContent = new Date().getFullYear();
+                }
+            }
+        }
+        loadIncludes();
     </script>
 </body>
 
