@@ -5,20 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrew Noble</title>
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 
 <body>
-    <header>
-        <h2>Adventure</h2>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="projects.html">Projects</a> |
-            <a href="adventure.html">Adventure</a>
-        </nav>
-    </header>
-    <hr>
+    <header id="header"></header>
+
     <main>
         <p>I love adventures outside. Here are some of my most memorable:</p>
         <ul>
@@ -30,14 +23,24 @@
         </ul>
         <p>I'd like to eventually post photos or video of these outings, but haven't made the time.</p>
     </main>
-    <hr />
 
-    <footer>
-        <div>© Andrew Noble, <span id="currentYear"></span></div>
-    </footer>
+    <footer id="footer"></footer>
 
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+    <script>
+        //header and footer fetcher
+        const includes = [
+            { id: "header", file: "/html/header.html" },
+            { id: "footer", file: "/html/footer.html" },
+        ];
 
+        includes.forEach(({ id, file }) => {
+            fetch(file)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(id).outerHTML = html;
+                });
+        });
+    </script>
 </body>
 
 </html>

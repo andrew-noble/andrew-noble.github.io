@@ -5,46 +5,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrew Noble</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 
 <body>
-    <header>
-        <h2>Andrew Noble</h2>
-        <nav>
-            <a href="./index.html">Home</a> |
-            <a href="./html/projects.html">Projects</a> |
-            <a href="./html/adventure.html">Adventure</a>
-        </nav>
-    </header>
-    <hr />
-    <main>
+    <header id="header"></header>
 
+    <main>
         <p>Hi, I'm Andrew. I am a software engineer by curiosity, and a hardware engineer by training (Cal
             Poly, SLO).
         </p>
         <p> If you're looking for my professional qualifications, my resume is <a
-                href="./assets/resume_20250402.pdf">here</a>.</p>
+                href="/assets/resume_20250402.pdf">here</a>.</p>
 
         <h2>Now?</h2>
         <p>(2025-04-25)</p>
         <p>I recently moved to the Bay Area! I am hacking on a bunch of projects (most recently <a
                 href="https://www.fermichain.com">fermi chain</a>) as well as running around the startup idea maze.
         </p>
-
     </main>
-    <hr />
-    <footer id="footer">
-        <div>© Andrew Noble, <span id="currentYear"></span></div>
-        <div>
-            <a href="https://www.linkedin.com/in/andrew-noble-r/">LinkedIn</a> |
-            <a href="https://github.com/andrew-noble">Github</a> |
-            <a href="https://x.com/andrewrno">Twitter</a>
-        </div>
-        <a href="https://forms.gle/rWN9JbZcmzJEBQFq7">Got Feedback?</a>
-    </footer>
-    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+
+    <footer id="footer"></footer>
+
+    <script>
+        //header and footer fetcher
+        const includes = [
+            { id: "header", file: "/html/header.html" },
+            { id: "footer", file: "/html/footer.html" },
+        ];
+
+        includes.forEach(({ id, file }) => {
+            fetch(file)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(id).outerHTML = html;
+                });
+        });
+    </script>
 </body>
 
 </html>
