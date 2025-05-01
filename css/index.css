@@ -11,7 +11,6 @@ header,
 footer {
   max-width: 800px;
   width: 100%;
-  text-align: left;
 }
 
 nav {
@@ -22,4 +21,12 @@ hr {
   width: 100%;
   max-width: 800px;
   border: 0.5px solid #ddd;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
