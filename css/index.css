@@ -27,6 +27,11 @@ footer {
   padding-inline: 1rem; /* logical shorthand = L/R padding */
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav {
   margin-bottom: 1rem;
 }
