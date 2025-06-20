@@ -1,61 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrew Noble</title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <script
-      data-goatcounter="https://andrewrn.goatcounter.com/count"
-      async
-      src="https://gc.zgo.at/count.js"
-    ></script>
-  </head>
 
-  <body>
-    <header id="header"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Noble</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
 
-    <main>
-      <p>I love adventures outside. Here are some of my most memorable:</p>
-      <ol>
-        <li>Backpacking 3 days in the Talkeetna mountains, fall 2024</li>
-        <li>Bikepacking across Alaska in summer 2024 on the Denali Highway</li>
-        <li>Bikpacking across Patagonia fall 2023</li>
-        <li>Pfiffner Traverse summer 2023</li>
-        <li>Bikepacking across West Britain fall 2022</li>
-        <li>
-          Hiking from Mexico to Canada on the Pacific Crest Trail in summer 2021
-        </li>
-      </ol>
-      <p>
-        I'd like to eventually post photos or video of these outings, but
-        haven't made the time. Feel free to email me if you want me to talk you
-        into hiking across the U.S. on the PCT 🏞️
-      </p>
-    </main>
+<body>
+  <header id="header"></header>
 
-    <footer id="footer"></footer>
+  <main>
+    <p>I love adventures outside. Here are some of my most memorable:</p>
+    <ol>
+      <li>Backpacking 3 days in the Talkeetna mountains, Fall 2024</li>
+      <li>Bikepacking across Alaska via the Denali Highway, Summer 2024</li>
+      <li>Bikpacking across Patagonia, Fall 2023</li>
+      <li>Pfiffner Traverse, Summer 2023</li>
+      <li>Bikepacking across West Britain, Fall 2022</li>
+      <li>
+        Hiking from Mexico to Canada on the Pacific Crest Trail, Summer 2021
+      </li>
+    </ol>
+    <p>
+      I'd like to eventually post photos or video of these outings, but
+      haven't made the time. Feel free to email me if you want me to talk you
+      into hiking across the U.S. on the PCT 🏞️
+    </p>
+  </main>
 
-    <script>
-      //header and footer loader
-      async function loadIncludes() {
-        const includes = [
-          { id: "header", file: "/html/header.html" },
-          { id: "footer", file: "/html/footer.html" },
-        ];
+  <footer id="footer"></footer>
 
-        for (const { id, file } of includes) {
-          const res = await fetch(file);
-          const html = await res.text();
-          document.getElementById(id).outerHTML = html;
+  <script>
+    //header and footer loader
+    async function loadIncludes() {
+      const includes = [
+        { id: "header", file: "/html/header.html" },
+        { id: "footer", file: "/html/footer.html" },
+      ];
 
-          if (id === "footer") {
-            document.getElementById("currentYear").textContent =
-              new Date().getFullYear();
-          }
+      for (const { id, file } of includes) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).outerHTML = html;
+
+        if (id === "footer") {
+          document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
         }
       }
-      loadIncludes();
-    </script>
-  </body>
+    }
+    loadIncludes();
+  </script>
+</body>
+
 </html>
