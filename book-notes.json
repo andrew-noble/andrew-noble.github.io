@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Fear and Loathing in Las Vegas",
+    "author": "Hunter S. Thompson",
+    "rating": 7,
+    "notes": "blah blah"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "rating": 5,
+    "notes": "Classic American novel about the Jazz Age and the American Dream"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "rating": 8,
+    "notes": "Epic sci-fi masterpiece with complex political intrigue and desert ecology"
+  }
+]

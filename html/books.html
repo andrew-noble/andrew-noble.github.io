@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Noble</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+  <header id="header"></header>
+
+  <main>
+    <div id="book-container"></div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script type="module">
+
+    import { createBookNoteComponent } from "../BookNote.js"
+
+    async function makeBookList() {
+      const books = await fetch('/book-notes.json')
+      const bookData = await books.json()
+      for (const book of bookData) {
+        const bc = createBookNoteComponent(book.title, book.author, book.rating, book.notes)
+        document.getElementById("book-container").appendChild(bc)
+      }
+    };
+    makeBookList();
+
+
+    //header and footer loader
+    async function loadIncludes() {
+      const includes = [
+        { id: "header", file: "/html/header.html" },
+        { id: "footer", file: "/html/footer.html" },
+      ];
+
+      for (const { id, file } of includes) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).outerHTML = html;
+
+        if (id === "footer") {
+          document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+        }
+      }
+    }
+    loadIncludes();
+  </script>
+</body>
+
+</html>
