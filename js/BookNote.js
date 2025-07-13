@@ -1,5 +1,6 @@
 export function createBookNoteComponent(title, author, rating, notes) {
   const bookNoteElement = document.createElement("div");
+  bookNoteElement.classList.add("book-note");
   const t = document.createElement("h2");
   t.textContent = title;
   const a = document.createElement("p");

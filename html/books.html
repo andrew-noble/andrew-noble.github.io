@@ -20,7 +20,7 @@
 
   <script type="module">
 
-    import { createBookNoteComponent } from "../BookNote.js"
+    import { createBookNoteComponent } from "../js/BookNote.js"
 
     async function makeBookList() {
       const books = await fetch('/book-notes.json')
@@ -30,7 +30,7 @@
         document.getElementById("book-container").appendChild(bc)
       }
     };
-    makeBookList();
+    makeBookList(); 1
 
 
     //header and footer loader
