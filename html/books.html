@@ -13,25 +13,18 @@
   <header id="header"></header>
 
   <main>
-    <div id="book-container"></div>
+    <div id="notes-placeholder"></div>
   </main>
 
   <footer id="footer"></footer>
 
   <script type="module">
 
-    import { createBookNoteComponent } from "../js/BookNote.js"
-
-    async function makeBookList() {
-      const books = await fetch('/book-notes.json')
-      const bookData = await books.json()
-      for (const book of bookData) {
-        const bc = createBookNoteComponent(book.title, book.author, book.rating, book.notes)
-        document.getElementById("book-container").appendChild(bc)
-      }
-    };
-    makeBookList(); 1
-
+    fetch('/html/book-note-snippets.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('notes-placeholder').innerHTML = html;
+      });
 
     //header and footer loader
     async function loadIncludes() {
