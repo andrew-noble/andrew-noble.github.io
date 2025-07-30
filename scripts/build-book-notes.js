@@ -33,7 +33,9 @@ function walk(dir) {
     <div class="website-blurb">
       ${
         frontmatter["website-blurb"]
-          ?.split("\n")
+          ?.replace(/```mermaid[\s\S]*?```/g, "")
+          .replace(/!?(\[\[.*?\]\])/g, "")
+          .split("\n")
           .map((line) => `<p class="blurb-paragraph">${line}</p>`)
           .join("\n") || ""
       }
