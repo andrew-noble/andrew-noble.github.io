@@ -1,71 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrew Noble</title>
     <link rel="stylesheet" href="/css/index.css" />
-    <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</head>
+    <script
+      data-goatcounter="https://andrewrn.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <header id="header"></header>
 
     <main>
-        <p>Hi, I'm Andrew. I'm an engineer and adventurer. I was born and raised in Alaska, previously worked on
-            strawberry picking robots, have traversed 3 different countries under my own power. Lately have been
-            learning about AI + software, which spurred this personal website.</p>
-        <p>I am a generalist through and through, and I love learning new things and meeting new people. I like
-            serendipitous encounters. If you do too, email me! aknoble dot andrew at gmail dot com
-        </p>
-        <p> I am working on a more comprehensive book review list, but in the meantime, here are a few
-            of my favorite books:
-        <ul>
-            <li>Zen and The Art of Motorcycle Maintenance</li>
-            <li>Shop Class as Soulcraft</li>
-            <li>Dune</li>
-            <li>Fear and Loathing in Las Vegas (never laughed so much reading)</li>
-            <li>The Prince</li>
-            <li>The Left Hand of Darkness</li>
-        </ul>
-        </p>
-        <p> If you're looking for my professional qualifications, my resume is <a
-                href="/assets/resume_20250715.pdf">here</a>.</p>
+      <p>
+        Hi, I'm Andrew. I'm an engineer and adventurer. I was born and raised in
+        Alaska, previously worked on strawberry picking robots, and love
+        human-powered adventure. Lately have been deepening a longtime interest
+        in AI + software, which spurred this personal website.
+      </p>
+      <p>
+        I am a generalist through and through, and I love learning new things
+        and meeting new people. I like serendipitous encounters. If you do too,
+        email me! aknoble dot andrew at gmail dot com
+      </p>
 
-        <h2>Now?</h2>
-        <p>(2025-06-15)</p>
-        <p>I'm really excited about AI learning tools right now. I've made a <a
-                href="https://www.andrewnoble.me/physics-vis/">physics tutoring agent</a> and, previously, a <a
-                href="https://www.circuit-tutor.xyz/">circuit theory tutor</a> that can generate and explain basic
-            circuit schematics.</p>
-        <p>This same technique is useful for generating data visualizations with natural
-            language, so I made a landing page for that to gauge interest <a href="https://www.usevibechart.com">here</a>. If you'd find
-            this useful, please let me know!</p>
+      <p>
+        If you're looking for my professional qualifications, my resume is
+        <a href="/assets/resume_20250715.pdf">here</a>.
+      </p>
+
+      <h2>Now?</h2>
+      <p>(2025-06-15)</p>
+      <p>
+        I'm really excited about AI learning tools right now. I've made a
+        <a href="https://www.andrewnoble.me/physics-vis/"
+          >physics tutoring agent</a
+        >
+        and, previously, a
+        <a href="https://www.circuit-tutor.xyz/">circuit theory tutor</a> that
+        can generate and explain basic circuit schematics.
+      </p>
+      <p>
+        This same technique is useful for generating data visualizations with
+        natural language, so I made a landing page for that to gauge interest
+        <a href="https://www.usevibechart.com">here</a>. If you'd find this
+        useful, please let me know!
+      </p>
     </main>
 
     <footer id="footer"></footer>
 
     <script>
-        //header and footer loader
-        async function loadIncludes() {
-            const includes = [
-                { id: "header", file: "/html/header.html" },
-                { id: "footer", file: "/html/footer.html" },
-            ];
+      //header and footer loader
+      async function loadIncludes() {
+        const includes = [
+          { id: "header", file: "/html/header.html" },
+          { id: "footer", file: "/html/footer.html" },
+        ];
 
-            for (const { id, file } of includes) {
-                const res = await fetch(file);
-                const html = await res.text();
-                document.getElementById(id).outerHTML = html;
+        for (const { id, file } of includes) {
+          const res = await fetch(file);
+          const html = await res.text();
+          document.getElementById(id).outerHTML = html;
 
-                if (id === "footer") {
-                    document.getElementById("currentYear").textContent = new Date().getFullYear();
-                }
-            }
+          if (id === "footer") {
+            document.getElementById("currentYear").textContent =
+              new Date().getFullYear();
+          }
         }
-        loadIncludes();
+      }
+      loadIncludes();
     </script>
-</body>
-
+  </body>
 </html>
