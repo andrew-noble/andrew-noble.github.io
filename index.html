@@ -1,85 +1,81 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andrew Noble</title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <script
-      data-goatcounter="https://andrewrn.goatcounter.com/count"
-      async
-      src="https://gc.zgo.at/count.js"
-    ></script>
-  </head>
 
-  <body>
-    <header id="header"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Noble</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
 
-    <main>
-      <p>
-        Hi, I'm Andrew. I'm an engineer and adventurer. I was born and raised in
-        Alaska, previously worked on strawberry picking robots, and love
-        human-powered adventure. Lately have been deepening a longtime interest
-        in AI + software, which spurred this personal website.
-      </p>
-      <p>
-        I am a generalist through and through, and I love learning new things
-        and meeting new people. I like serendipitous encounters. If you do too,
-        email me! aknoble dot andrew at gmail dot com
-      </p>
+<body>
+  <header id="header"></header>
 
-      <p>
-        If you're looking for my professional qualifications, my resume is
-        <a href="/assets/resume_20250715.pdf">here</a>.
-      </p>
+  <main>
+    <p>
+      Hi, I'm Andrew. I'm an engineer and adventurer. I was born and raised in
+      Alaska, previously worked on strawberry picking robots, and love
+      human-powered adventure. Lately have been deepening a longtime interest
+      in software, which spurred this personal website.
+    </p>
+    <p>
+      I am a generalist through and through, and I love learning new things
+      and meeting new people. I like serendipitous encounters. If you do too,
+      email me! aknoble dot andrew at gmail dot com
+    </p>
 
-      <h2>Now?</h2>
-      <p>(2025-08-01)</p>
-      <p>
-        I am getting ready to start Carnegie Mellon's masters in robotic systems
-        development program at the end of August. If you're in Pittsburgh, reach
-        out, lets get a beer!
-      </p>
-      <p>
-        Besides the grad program, I remain really interested in startups, most
-        recently, I've been experimenting with edtech. I've made a
-        <a href="https://www.andrewnoble.me/physics-vis/"
-          >physics tutoring agent</a
-        >
-        and, previously, a
-        <a href="https://www.circuit-tutor.xyz/">circuit theory tutor</a> that
-        can generate and explain basic circuit schematics.
-      </p>
-      <p>
-        This same technique is useful for generating data visualizations with
-        natural language, so I made a landing page for that to gauge interest
-        <a href="https://www.usevibechart.com">here</a>. If you'd find this
-        useful, please let me know!
-      </p>
-    </main>
+    <p>
+      If you're looking for my professional qualifications, my resume is
+      <a href="/assets/resume_20250715.pdf">here</a>.
+    </p>
+    <p> The <a href="/html/projects.html">project page</a> linked above is also a good way to see my work.</p>
+    <h2>Now?</h2>
+    <p>(2025-08-01)</p>
+    <p>
+      I am getting ready to start Carnegie Mellon's masters in robotic systems
+      development program at the end of August. If you're in Pittsburgh, reach
+      out, lets get a beer!
+    </p>
+    <p>
+      Besides the grad program, I remain really interested in startups, most
+      recently, I've been experimenting with edtech. I've made a
+      <a href="https://www.andrewnoble.me/physics-vis/">physics tutoring agent</a>
+      and, previously, a
+      <a href="https://www.circuit-tutor.xyz/">circuit theory tutor</a> that
+      can generate and explain basic circuit schematics.
+    </p>
+    <p>
+      This same technique is useful for generating data visualizations with
+      natural language, so I made a landing page for that to gauge interest
+      <a href="https://www.usevibechart.com">here</a>. If you'd find this
+      useful, please let me know!
+    </p>
+  </main>
 
-    <footer id="footer"></footer>
+  <footer id="footer"></footer>
 
-    <script>
-      //header and footer loader
-      async function loadIncludes() {
-        const includes = [
-          { id: "header", file: "/html/header.html" },
-          { id: "footer", file: "/html/footer.html" },
-        ];
+  <script>
+    //header and footer loader
+    async function loadIncludes() {
+      const includes = [
+        { id: "header", file: "/html/header.html" },
+        { id: "footer", file: "/html/footer.html" },
+      ];
 
-        for (const { id, file } of includes) {
-          const res = await fetch(file);
-          const html = await res.text();
-          document.getElementById(id).outerHTML = html;
+      for (const { id, file } of includes) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).outerHTML = html;
 
-          if (id === "footer") {
-            document.getElementById("currentYear").textContent =
-              new Date().getFullYear();
-          }
+        if (id === "footer") {
+          document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
         }
       }
-      loadIncludes();
-    </script>
-  </body>
+    }
+    loadIncludes();
+  </script>
+</body>
+
 </html>
