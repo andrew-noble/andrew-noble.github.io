@@ -1,140 +1,169 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/projects.css" />
-  </head>
 
-  <body>
-    <header id="header"></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/projects.css" />
+</head>
 
-    <main>
-      <p>
-        "Below the surface of the machine, the program moves. Without effort, it
-        expands and contracts. In great harmony, electrons scatter and regroup.
-        The forms on the monitor are but ripples on the water. The essence stays
-        invisibly below."
-      </p>
-      <p style="text-align: right">Marijn Haverbeke, Eloquent Javascript</p>
-      <h2>Software Projects</h2>
-      <ol>
-        <li>
-          <a href="https://andrewnoble.me/physics-vis/">Physics Vis</a>: an
-          experiment in diagram generation and interpretation using LLMs. This
-          app can tutor introductory physics with free body diagrams!
-        </li>
+<body>
+  <header id="header"></header>
 
-        <li>
-          <a href="https://fermi-game.onrender.com/">Fermi Chain</a>: a
-          wordle-like daily game to practice order-of-magnitude reasoning (think
-          "What volume of air does humanity inhale in a day?").
-        </li>
-        <li>
-          <a href="https://www.circuit-tutor.xyz">Circuit Tutor</a>: a
-          proof-of-concept for an LLM-powered electronics copilot. Useful for
-          learning, and eventually I think it could be useful for circuit
-          design, much like
-          <a href="https://www.falstad.com/circuit/"
-            >Falstad's Circuit Simulator</a
-          >.
-        </li>
-        <li>
-          <a href="https://github.com/andrew-noble/small-gpt">Small GPT</a>:
-          small language model I trained from scratch to learn ML (pure pytorch,
-          no frameworks!)
-        </li>
-        <li>
-          <a href="https://andrewnoble.me/mental-math/">Mental Math</a>: a react
-          quiz app I made because I have a mechanical engineering degree and
-          still multiply on my fingers lol
-        </li>
-        <li>
-          <a href="https://andrew-noble.github.io/hot-dice-scoreboard/"
-            >Hot Dice Scoreboard</a
-          >: a react scoreboard UI for a group dice game that my in-laws play
-        </li>
-        <li>
-          <a href="https://github.com/andrew-noble/spotify-player"
-            >Spotify Player</a
-          >: a spotify playback app
-        </li>
-        <li>
-          <a href="./html/memory-game.html">Memory Game</a>: some of my first
-          javascript code I wrote in ~March 2024
-        </li>
-      </ol>
+  <main>
+    <p>
+      "Below the surface of the machine, the program moves. Without effort, it
+      expands and contracts. In great harmony, electrons scatter and regroup.
+      The forms on the monitor are but ripples on the water. The essence stays
+      invisibly below."
+    </p>
+    <p style="text-align: right">Marijn Haverbeke, Eloquent Javascript</p>
+    <h2>Software Projects</h2>
+    <ol>
+      <li class="project-item">
+        <strong>Physics Vis</strong>: an
+        experiment in diagram generation and interpretation using LLMs. This
+        app can tutor introductory physics with free body diagrams!
+        <ul class="project-item-link-group">
+          <li><a href="https://andrewnoble.me/physics-vis/" class="project-item-link">code</a></li>
+          <li><a
+              href="https://www.loom.com/share/5bb747b3ffae4accb7b91c44520d1966?sid=8a8b57cc-e71e-4e7e-806a-733e27ef9ad6"
+              class="project-item-link">loom demo</a></li>
+          <li><a href="https://www.physicsviewer.com/" class="project-item-link">live app</a></li>
+        </ul>
+      </li>
 
-      <h2>Random Non-Software Projects Gallery</h2>
-      <div class="gallery-container">
-        <figure class="gallery-item">
-          <img
-            src="../assets/pct-monuments.JPEG"
-            alt="PCT Monument Comparison"
-          />
-          <figcaption>
-            Southern and Northern PCT Trail Monuments, in bookend form
-          </figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img
-            src="../assets/cutting-board.JPEG"
-            alt="Handmade Cutting Board"
-          />
-          <figcaption>End-grain cutting board from I think oak</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="../assets/bike-bag.JPEG" alt="Bikepacking Bottle Bag" />
-          <figcaption>
-            Custom bikepacking bottle holder with roll-top closure. You can make
-            crazy good outdoor gear in a weekend from zero sewing skills
-          </figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="../assets/sling.JPEG" alt="Handmade Sling Bag" />
-          <figcaption>
-            Sling I made for my sister, partially upcycled from an old shirt of
-            hers
-          </figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="../assets/hoody.JPEG" alt="Blue Hoodie Portrait" />
-          <figcaption>Hoody I made! My first piece of apparel</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="../assets/night-stand.JPEG" alt="Wooden Nightstand" />
-          <figcaption>
-            My first major woodworking proj - a nightstand with patterned
-            plywood drawer front
-          </figcaption>
-        </figure>
-      </div>
-    </main>
+      <li class="project-item">
+        <strong>Fermi Chain</strong>: a
+        wordle-like daily game to practice order-of-magnitude reasoning (think
+        "What volume of air does humanity inhale in a day?"). This got 3k visits and HN front page!
+        <ul class="project-item-link-group">
+          <li><a href="https://fermi-game.onrender.com/" class="project-item-link">code</a></li>
+          <li><a
+              href="https://www.loom.com/share/3ddcf479a4ab407bbf1ce1bca7bdf5d2?sid=888b39d4-d76b-42e4-b9df-c7b626cb4d09"
+              class="project-item-link">loom demo</a></li>
+          <li><a href="https://fermi-game.onrender.com/" class="project-item-link">live app</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Circuit Tutor</strong>: a
+        proof-of-concept for an LLM-powered electronics copilot. Useful for
+        learning, and eventually I think it could be useful for circuit
+        design, much like
+        <a href="https://www.falstad.com/circuit/">Falstad's Circuit Simulator</a>.
+        <ul class="project-item-link-group">
+          <li><a href="https://www.circuit-tutor.xyz" class="project-item-link">code</a></li>
+          <li><a
+              href="https://www.loom.com/share/535632b1f0874b6787f7bca180ea5564?sid=0746db11-bc07-49a9-9d00-b5fdacfd901b"
+              class="project-item-link">loom demo</a></li>
+          <li><a href="https://circuit-tutor.xyz/" class="project-item-link">live app</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Small GPT</strong>:
+        small language model I trained from scratch to learn ML (pure pytorch,
+        no frameworks!)
+        <ul class="project-item-link-group">
+          <li><a href="https://github.com/andrew-noble/small-gpt" class="project-item-link">code</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Mental Math</strong>: a react
+        quiz app I made because I have a mechanical engineering degree and
+        still multiply on my fingers lol
+        <ul class="project-item-link-group">
+          <li><a href="https://andrewnoble.me/mental-math/" class="project-item-link">code</a></li>
+          <li><a href="https://www.andrewnoble.me/mental-math/" class="project-item-link">live app</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Hot Dice Scoreboard</strong>: a react scoreboard UI for a group dice game that my in-laws play
+        <ul class="project-item-link-group">
+          <li><a href="https://andrew-noble.github.io/hot-dice-scoreboard/" class="project-item-link">code</a></li>
+          <li><a href="https://www.andrewnoble.me/hot-dice-scoreboard/" class="project-item-link">live app</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Spotify Player</strong>:
+        a spotify playback app
+        <ul class="project-item-link-group">
+          <li><a href="https://github.com/andrew-noble/spotify-player" class="project-item-link">code</a></li>
+        </ul>
+      </li>
+      <li class="project-item">
+        <strong>Memory Game</strong>: some of my first
+        javascript code I wrote in ~March 2024
+        <ul class="project-item-link-group">
+          <li><a href="./html/memory-game.html" class="project-item-link">code</a></li>
+        </ul>
+      </li>
+    </ol>
 
-    <footer id="footer"></footer>
+    <h2>Random Non-Software Projects Gallery</h2>
+    <div class="gallery-container">
+      <figure class="gallery-item">
+        <img src="../assets/pct-monuments.JPEG" alt="PCT Monument Comparison" />
+        <figcaption>
+          Southern and Northern PCT Trail Monuments, in bookend form
+        </figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="../assets/cutting-board.JPEG" alt="Handmade Cutting Board" />
+        <figcaption>End-grain cutting board from I think oak</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="../assets/bike-bag.JPEG" alt="Bikepacking Bottle Bag" />
+        <figcaption>
+          Custom bikepacking bottle holder with roll-top closure. You can make
+          crazy good outdoor gear in a weekend from zero sewing skills
+        </figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="../assets/sling.JPEG" alt="Handmade Sling Bag" />
+        <figcaption>
+          Sling I made for my sister, partially upcycled from an old shirt of
+          hers
+        </figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="../assets/hoody.JPEG" alt="Blue Hoodie Portrait" />
+        <figcaption>Hoody I made! My first piece of apparel</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="../assets/night-stand.JPEG" alt="Wooden Nightstand" />
+        <figcaption>
+          My first major woodworking proj - a nightstand with patterned
+          plywood drawer front
+        </figcaption>
+      </figure>
+    </div>
+  </main>
 
-    <script>
-      //header and footer loader
-      async function loadIncludes() {
-        const includes = [
-          { id: "header", file: "/html/header.html" },
-          { id: "footer", file: "/html/footer.html" },
-        ];
+  <footer id="footer"></footer>
 
-        for (const { id, file } of includes) {
-          const res = await fetch(file);
-          const html = await res.text();
-          document.getElementById(id).outerHTML = html;
+  <script>
+    //header and footer loader
+    async function loadIncludes() {
+      const includes = [
+        { id: "header", file: "/html/header.html" },
+        { id: "footer", file: "/html/footer.html" },
+      ];
 
-          if (id === "footer") {
-            document.getElementById("currentYear").textContent =
-              new Date().getFullYear();
-          }
+      for (const { id, file } of includes) {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).outerHTML = html;
+
+        if (id === "footer") {
+          document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
         }
       }
-      loadIncludes();
-    </script>
-  </body>
+    }
+    loadIncludes();
+  </script>
+</body>
+
 </html>

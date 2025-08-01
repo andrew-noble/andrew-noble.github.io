@@ -21,3 +21,28 @@
   max-width: 250px;
   color: #666;
 }
+
+.project-item {
+  margin-bottom: 1rem;
+}
+
+.project-item-link-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.project-item-link {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  background: #f5f5f5;
+}
+
+.project-item-link:hover {
+  background: #e0e0e0;
+}
