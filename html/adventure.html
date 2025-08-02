@@ -1,60 +1,70 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrew Noble</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script
+      data-goatcounter="https://andrewrn.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrew Noble</title>
-  <link rel="stylesheet" href="/css/index.css" />
-  <script data-goatcounter="https://andrewrn.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</head>
+  <body>
+    <header id="header"></header>
 
-<body>
-  <header id="header"></header>
+    <main>
+      <p>I love adventures outside. Here are some of my most memorable:</p>
+      <ol>
+        <li>
+          Backpacking 3 days in the Talkeetna mountains in Alaska - Fall 2024
+        </li>
+        <li>
+          Packrafting on the Nenana, Kenai, and Eagle Rivers in Alaska - Summer
+          2024
+        </li>
+        <li>Bikepacking across Alaska via the Denali Highway - Summer 2024</li>
+        <li>Bikepacking across Patagonia - Fall 2023</li>
+        <li>Pfiffner Traverse - Summer 2023</li>
+        <li>
+          Bikepacking from Lands End near Penzance, England to Bangor, Wales -
+          Fall 2022
+        </li>
+        <li>
+          Hiking from Mexico to Canada on the Pacific Crest Trail - Summer 2021
+        </li>
+      </ol>
+      <p>
+        I'd like to eventually post photos or video of these outings, but
+        haven't made the time. Feel free to email me if you want me to talk you
+        into hiking across the U.S. on the PCT 🏞️
+      </p>
+    </main>
 
-  <main>
-    <p>I love adventures outside. Here are some of my most memorable:</p>
-    <ol>
-      <li>Backpacking 3 days in the Talkeetna mountains in Alaska, Fall 2024</li>
-      <li>Packrafting on the Nenana, Kenai, and Eagle Rivers in Alaska, Summer 2024</li>
-      <li>Bikepacking across Alaska via the Denali Highway, Summer 2024</li>
-      <li>Bikpacking across Patagonia, Fall 2023</li>
-      <li>Pfiffner Traverse, Summer 2023</li>
-      <li>Bikepacking across West Britain, Fall 2022</li>
-      <li>
-        Hiking from Mexico to Canada on the Pacific Crest Trail, Summer 2021
-      </li>
-    </ol>
-    <p>
-      I'd like to eventually post photos or video of these outings, but
-      haven't made the time. Feel free to email me if you want me to talk you
-      into hiking across the U.S. on the PCT 🏞️
-    </p>
-  </main>
+    <footer id="footer"></footer>
 
-  <footer id="footer"></footer>
+    <script>
+      //header and footer loader
+      async function loadIncludes() {
+        const includes = [
+          { id: "header", file: "/html/header.html" },
+          { id: "footer", file: "/html/footer.html" },
+        ];
 
-  <script>
-    //header and footer loader
-    async function loadIncludes() {
-      const includes = [
-        { id: "header", file: "/html/header.html" },
-        { id: "footer", file: "/html/footer.html" },
-      ];
+        for (const { id, file } of includes) {
+          const res = await fetch(file);
+          const html = await res.text();
+          document.getElementById(id).outerHTML = html;
 
-      for (const { id, file } of includes) {
-        const res = await fetch(file);
-        const html = await res.text();
-        document.getElementById(id).outerHTML = html;
-
-        if (id === "footer") {
-          document.getElementById("currentYear").textContent =
-            new Date().getFullYear();
+          if (id === "footer") {
+            document.getElementById("currentYear").textContent =
+              new Date().getFullYear();
+          }
         }
       }
-    }
-    loadIncludes();
-  </script>
-</body>
-
+      loadIncludes();
+    </script>
+  </body>
 </html>
