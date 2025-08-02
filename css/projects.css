@@ -35,14 +35,14 @@
 }
 
 .project-item-link {
-  color: #666;
+  color: #0d1b2a;
   text-decoration: none;
   font-size: 0.9rem;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
-  background: #f5f5f5;
+  background: #a3c8ef;
 }
 
 .project-item-link:hover {
-  background: #e0e0e0;
+  background: #91bceb;
 }
