@@ -28,7 +28,7 @@
     <footer id="footer"></footer>
 
     <script type="module">
-      fetch("/html/book-note-snippets.html")
+      fetch("./book-note-snippets.html")
         .then((res) => res.text())
         .then((html) => {
           document.getElementById("notes-placeholder").innerHTML = html;
@@ -37,8 +37,8 @@
       //header and footer loader
       async function loadIncludes() {
         const includes = [
-          { id: "header", file: "/html/header.html" },
-          { id: "footer", file: "/html/footer.html" },
+          { id: "header", file: "/header.html" },
+          { id: "footer", file: "/footer.html" },
         ];
 
         for (const { id, file } of includes) {

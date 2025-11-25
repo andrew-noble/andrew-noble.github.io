@@ -3,7 +3,7 @@ const path = require("path");
 const yaml = require("js-yaml");
 
 const notesDir = "/home/andrew/Documents/obsidian-vault/media-notes/books";
-const outputFile = "./html/book-note-snippets.html";
+const outputFile = "./books/book-note-snippets.html";
 
 let allCards = "";
 
@@ -52,5 +52,5 @@ walk(notesDir);
 
 fs.writeFileSync(
   outputFile,
-  `<div class="notes-container">\n${allCards}</div>`
+  `<div class="notes-container">\n${allCards}</div>`,
 );
