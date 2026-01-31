@@ -19,12 +19,25 @@ body {
 }
 
 /* keep the centred column with responsive side-padding */
+.home-logo-wrapper,
 header,
 main,
 footer {
   max-width: 800px;
   width: 100%;
   padding-inline: 1rem; /* logical shorthand = L/R padding */
+}
+
+.home-logo-wrapper {
+  margin-bottom: 0;
+}
+
+.home-logo {
+  display: block;
+  height: 250px;
+  width: auto;
+  padding: 1rem;
+  margin-inline: auto;
 }
 
 footer {
