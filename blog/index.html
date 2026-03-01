@@ -11,10 +11,19 @@
       async
       src="https://gc.zgo.at/count.js"
     ></script>
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
     <meta name="apple-mobile-web-app-title" content="Andrew" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
@@ -27,7 +36,9 @@
       <ul class="post-list">
         <li>
           <span class="post-date">2026-03-01</span>
-          <a href="/blog/jetson-ros2-docker.html">ROS2 on Jetson with Docker</a>
+          <a href="/blog/integer-sequence-manipulation.html"
+            >Integer Sequence Manipulation</a
+          >
         </li>
       </ul>
     </main>
@@ -45,7 +56,8 @@
           const html = await res.text();
           document.getElementById(id).outerHTML = html;
           if (id === "footer") {
-            document.getElementById("currentYear").textContent = new Date().getFullYear();
+            document.getElementById("currentYear").textContent =
+              new Date().getFullYear();
           }
         }
       }
