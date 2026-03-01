@@ -2,14 +2,10 @@
   "name": "website",
   "version": "1.0.0",
   "description": "Hi! I am learning about web development and this repo is me spinning up my own personal website. It will eventually house a portfolio of projects in addition to my other interests like outdoor adventure, woodworking and writing.",
-  "main": "build-notes.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "js-yaml": "^4.1.0"
-  }
+  "license": "ISC"
 }
