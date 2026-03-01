@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROS2 on Jetson with Docker — Andrew Noble</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
+    <script
+      data-goatcounter="https://andrewrn.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Andrew" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+
+  <body>
+    <header id="header"></header>
+
+    <main>
+      <div class="post-title">ROS2 on Jetson with Docker</div>
+      <div class="post-meta">2026-03-01</div>
+
+      <article class="post-body"></article>
+
+      <div class="post-nav">
+        <a href="/blog">← All posts</a>
+      </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script>
+      fetch("/blog/posts/jetson-ros2-docker.md")
+        .then((r) => r.text())
+        .then((md) => {
+          document.querySelector(".post-body").innerHTML = marked.parse(md);
+        });
+
+      async function loadIncludes() {
+        const includes = [
+          { id: "header", file: "/header.html" },
+          { id: "footer", file: "/footer.html" },
+        ];
+        for (const { id, file } of includes) {
+          const res = await fetch(file);
+          const html = await res.text();
+          document.getElementById(id).outerHTML = html;
+          if (id === "footer") {
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+          }
+        }
+      }
+      loadIncludes();
+    </script>
+  </body>
+</html>
