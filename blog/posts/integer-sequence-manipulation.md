@@ -17,3 +17,5 @@ Each subpattern in the result is produced by a distinct mathematical operation:
 The fun part: you multiply these operations to compose more complex patterns. Example: The sequence `0 -1 1 -2 2 -3 3 -4 4` is produced by stacking a shelf with a sign flip. It's `floor((i+1) / 2) * (-1)^i`. This is the sequence I needed to lay out a ladder of resistors in my circuit tutor application.
 
 So, to reverse-engineer the function of a pattern, decompose it into its sub-patterns, and add the requisite operator. Is there a sign flipping? Add a `(-1)^(i)`. Is there shelving too? Add a floor operation.
+
+P.S. this is my very first blog post! I'm excited to finally unshackle a lot of the notes I've written over the years. I hope you enjoy.
