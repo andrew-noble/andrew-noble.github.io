@@ -9,4 +9,4 @@
    ```
 3. Add the post to `blog/index.html`
 
-The HTML file is just chrome (title, date, nav). All content lives in the `.md` file and is rendered client-side by marked.js.
+The HTML file is just boilerplate (title, date, nav). All content lives in the `.md` file and is rendered client-side by marked.js.
