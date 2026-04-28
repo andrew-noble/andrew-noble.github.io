@@ -1,8 +1,8 @@
-Between February and March, 2026, I designed, built, and tested my first printed circuit board end-to-end. This board takes 24 V from two car batteries and does two things with it: (1) protects sensitive devices from reverse-polarity and transient, and (2) regulates the 24 V down to 12 V for a onboard computer and stepper motor.
-
-I learned an huge amount, and want to record it for posterity. In the spirit of Derek Sivers, I've compressed everything into really tight [directives](https://sive.rs/2do), with expansions on each for rationale.
+Between February and March, 2026, I designed, built, and tested my first printed circuit board end-to-end for my mobile manipulator robot. It takes 24 V from two car batteries and does two things with it: (1) protects sensitive devices from reverse-polarity connections and current transients, and (2) regulates the 24 V down to 12 V for an onboard computer and stepper motor.
 
 For CAD software I used KiCAD and this primarily concerns analog electronics. I'll circle back when I design something with digital logic.
+
+I learned an huge amount, and want to record it for posterity. I wanted to try compress the learnings into directives in the spirit of [this post](https://sive.rs/2do), with rationale for each.
 
 # TL;DR, directives:
 
@@ -98,10 +98,14 @@ Two revs on this board generated a few of the directives:
 
 ## Extra Learnings
 
-I had a few false short confusions during testing: - With a PSU connected but not outputting power, you can erroneously read a short across the input terminals _through the PSU's internal path_. This confused me. - Using a DMM's continuity mode on circuits with large caps produces shorts momentarily while the capacitor charges up.
+I had a few false short confusions during testing:
+
+- With a PSU connected but not outputting power, you can erroneously read a short across the input terminals _through the PSU's internal path_. This confused me.
+- Using a DMM's continuity mode on circuits with large caps produces shorts momentarily while the capacitor charges up.
+
 My EE friend Matt told me about a "battery junction box" approach. Whereas my board accepts battery power and regulates it centrally before distributing it, a BJB approach distributes raw voltage and has a regulator for each device. It's more efficient and robust because you're distributing higher voltage (like mains AC vs home DC) and no single point of failure, respectively. It costs you more PCBs and regulator chips. Common practice in EVs.
 
-It was very surprising to me that most of my part selections and decisions were based on part availability rather than system requirements. I suspect this is because PCB changes are closer in spirit to software changes than they are to mechanical changes. Changing a motor in a mechanical system would have very disruptive cascading effects into other parts of the system. But even fairly dramatic PCB changes don't threaten to add a bunch of work.
+It was surprising that most of my part selections and decisions were based on part availability rather than system requirements. I suspect this is because PCB changes are closer in spirit to software changes than they are to mechanical changes. Changing a motor in a mechanical system would have very disruptive cascading effects into other parts of the system. But even fairly dramatic PCB changes don't threaten to add a bunch of work.
 
 It was surprising that most of the hurdles (and thus learning) were logistical and unrelated to electrical engineering. Component procurement, interpreting datasheets, understanding footprints/packages, EDA file availability were all bigger hurdles than understanding the electrical principles.
 
@@ -146,11 +150,11 @@ It's better to align all of these considerations for each part at a single time,
 </figure>
 
 <figure>
-<iframe width="315" height="560" src="https://www.youtube.com/embed/er9gKZjxFXE" title="Heat gun soldering" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/er9gKZjxFXE" title="Heat gun soldering" allowfullscreen></iframe>
 <figcaption>Heat gun soldering a few SMD capacitors</figcaption>
 </figure>
 
 <figure>
-<iframe width="315" height="560" src="https://www.youtube.com/embed/9UgSQ3jcM8I" title="Solder paste spread" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/9UgSQ3jcM8I" title="Solder paste spread" allowfullscreen></iframe>
 <figcaption>How to apply solder paste by hand to SMD pads</figcaption>
 </figure>

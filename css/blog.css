@@ -84,10 +84,29 @@
   font-size: 1em;
 }
 
+.post-body figure {
+  margin: 1.5rem 0;
+}
+
+.post-body figcaption {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
 .post-body img {
   max-width: 100%;
   border-radius: 6px;
-  margin: 1rem 0;
+  display: block;
+}
+
+.post-body iframe {
+  display: block;
+  width: 100%;
+  max-width: 315px;
+  aspect-ratio: 9 / 16;
+  border: none;
+  border-radius: 6px;
 }
 
 .post-body ul,
