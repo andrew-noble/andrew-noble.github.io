@@ -135,17 +135,17 @@ It's better to align all of these considerations for each part at a single time,
 ## Media
 
 <figure>
-<img src="/assets/pcb-schematic.png" alt="PCB schematic" />
+<img src="/blog/assets/pcb-schematic.png" alt="PCB schematic" />
 <figcaption>Schematic capture in KiCAD, showing sub-circuits from directive #4</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/pcb.png" alt="PCB layout" />
+<img src="/blog/assets/pcb.png" alt="PCB layout" />
 <figcaption>Board layout in KiCAD</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/pcb-done.jpeg" alt="Completed PCB" />
+<img src="/blog/assets/pcb-done.jpeg" alt="Completed PCB" />
 <figcaption>Completed and tested board</figcaption>
 </figure>
 

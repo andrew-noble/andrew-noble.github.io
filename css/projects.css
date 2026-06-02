@@ -1,31 +1,104 @@
-/* Gallery Styles */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
+/* Category collapsible */
+.category-header {
+  cursor: pointer;
+  user-select: none;
 }
 
-.gallery-item img {
-  width: 250px;
-  height: 250px;
+.category-header:hover {
+  opacity: 0.75;
+}
+
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.category.collapsed .toggle-icon {
+  transform: rotate(-90deg);
+}
+
+.category-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.25s ease;
+  overflow: hidden;
+}
+
+.category.collapsed .category-content {
+  grid-template-rows: 0fr;
+}
+
+.category-content > div {
+  overflow: hidden;
+}
+
+/* Project cards */
+.project-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid #ddd;
+  align-items: flex-start;
+}
+
+.project-card-left {
+  flex: 1;
+}
+
+.project-card-left p {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.project-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.project-card-right {
+  flex: 0 0 220px;
+  width: 220px;
+}
+
+.project-screenshot {
+  width: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-item figcaption {
-  margin-top: 0.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  max-width: 250px;
-  color: #666;
+.project-screenshot-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f0f4f8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.8rem;
 }
 
-.project-item {
-  margin-bottom: 1rem;
+/* Responsive iframe (YouTube) */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Link buttons */
 .project-item-link-group {
   display: flex;
   gap: 0.5rem;
