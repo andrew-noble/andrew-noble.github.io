@@ -98,6 +98,23 @@
   border: 0;
 }
 
+/* Small phone layout: stack image below text */
+@media (max-width: 480px) {
+  .project-card {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-card-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .project-screenshot {
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* Link buttons */
 .project-item-link-group {
   display: flex;
